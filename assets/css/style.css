@@ -80,7 +80,18 @@ header ul li a.active{
 header ul li a.active:hover{
   opacity: 0.8;
 }
-
+/* .bg-hero{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+} */
+ /* .bg-hero .hero-bg img{
+  position: absolute;
+  max-width: 1920px;
+  width: 100%;
+ } */
+.bg-hero{
+  background: url("../images/bg-hero.png") no-repeat center center;
+  background-size: cover;
+}
 .hero-content{
   display: flex;
   align-items: center;
@@ -133,6 +144,9 @@ header ul li a.active:hover{
   align-items: center;
   justify-content: center;
   padding-bottom: 56px;
+}
+#sobre .container{
+  padding: 0 20px;
 }
 #sobre .sobre span{
   display: block;
@@ -193,6 +207,21 @@ header ul li a.active:hover{
 }
 #projetos{
   padding: 100px 10px;
+  position: relative;
+}
+#projetos .container{
+  position: relative;
+  z-index: 10;
+}
+#projetos .bg-projects{
+  position: absolute;
+  z-index: 1;
+  max-width: 100%;
+  width: 100%;
+}
+#projetos .projeto-items{
+  position: relative;
+  z-index: 20;
 }
 #projetos h3{
   font-size: 4.8rem;
@@ -283,4 +312,68 @@ footer p{
   text-align: center;
   color: var(--primary);
   padding-top: 28px;
+}
+
+/* RESPONSIVO ==================================*/  
+@media(max-width: 768px){
+
+  #projetos .projeto-items{
+    flex-wrap: wrap;
+  }
+}
+@media(max-width:530px){
+  #hero{
+    padding: 0 20px;
+  }
+  #hero .hero-content{
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  .hero-content h4{
+    font-size: 2.4rem;
+    text-align: center; 
+  }
+  .hero-content h1{
+    font-size: 4.2rem;
+    text-align: center; 
+  }
+  .hero-content p{
+    font-size: 2rem;
+    text-align: center; 
+  }
+  #sobre{
+    padding-bottom: 40px;
+  }
+  #sobre .sobre span, #sobre .sobre p, #projetos .sub-title{
+    font-size: 2rem;
+  }
+  #sobre .sobre h2{
+    font-size: 3.6rem;
+  }
+  #projetos{
+    padding: 30px 10px;
+  }
+  #projetos h3{
+    font-size: 3.6rem;
+  }
+  #projetos .projeto-items{
+    padding-top: 40px;
+  }
+  header ul{
+    gap: 0;
+  }
+  header ul li a{
+    padding: 14px 20px;
+    font-size: 1.4rem;
+  }
+  #sobre .sobre .links a:first-child{
+    padding: 14px 20px;
+    font-size: 1.8rem;
+  }
+}
+@media(max-width: 375px){
+  #sobre .sobre .links{
+    flex-direction: column;
+    gap: 20px;
+  }
 }

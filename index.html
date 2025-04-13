@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://raw.githubusercontent.com/iconfu/svg-inject/v1.2.3/dist/svg-inject.min.js"></script>
 
   <meta name="keywords" content="frontend, backend, animation, css, development web, desenvolvimento web, ux, ui, uxui" />
@@ -37,47 +39,53 @@
   <title>Anderson Otávio</title>
 </head>
 <body>
-  <header>
-    <ul>
-      <li><a class="active" href="/">Início</a></li>
-      <li><a href="#sobre">Sobre mim</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </header>
-  <section id="hero">
-    <div class="hero-content container">
-      <h4>Fala Dev, meu nome é <span>Anderson Otávio</span> e sou</h4>
-      <h1>Desenvolvedor Web</h1>
-      <p>Estou sempre em busca de oportunidades para aprender e colaborar em projetos desafiadores, para aperfeiçoar cada vez mais minhas habilidades.</p>
-      <a href="">Baixar meu currículo</a>
-    </div>
-  </section>
-  <section id="sobre">
+  <div class="bg-hero">
+    <!-- <div class="hero-bg">
+      <img src="/assets/images/bg-hero.png" alt="background hero">
+    </div> -->
+    <header data-aos="fade-down" data-aos-duration="1000">
+      <ul>
+        <li><a class="active" href="/">Início</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </header>
+    <section id="hero">
+      <div class="hero-content container"  data-aos="fade-up" data-aos-duration="1500">
+        <h4>Fala Dev, meu nome é <span>Anderson Otávio</span> e sou</h4>
+        <h1>Desenvolvedor Web</h1>
+        <p>Estou sempre em busca de oportunidades para aprender e colaborar em projetos desafiadores, para aperfeiçoar cada vez mais minhas habilidades.</p>
+        <a href="#" class="button-cv">Baixar meu currículo</a>
+      </div>
+    </section>
+  </div>
+  <section id="sobre" data-aos="fade-left" data-aos-duration="1500">
     <div class="container sobre">
       <span>Sobre mim 🤗</span>
       <h2>Anderson Otávio </h2>
       <p>Com formação em Análise e Desenvolvimento de Sistemas, tenho direcionado meu desenvolvimento profissional para a criação de sites e aplicações web.
         Meu objetivo é colaborar com equipes dinâmicas e contribuir para projetos que impactem positivamente a vida das pessoas.</p>
         <div class="links">
-          <a href="https://www.linkedin.com/in/andersonotavio/">Acessar o LinkedIn</a>
-          <a href="https://github.com/andersonotavio">Ver GitHub ➝</a>
+          <a href="https://www.linkedin.com/in/andersonotavio/" target="_blank">Acessar o LinkedIn</a>
+          <a href="https://github.com/andersonotavio" target="_blank">Ver GitHub ➝</a>
         </div>
     </div>
   </section>
   <section id="projetos">
-    <div class="container">
+      <img class="bg-projects" src="./assets/images/bg-projects.png" alt="">
+    <div class="container" data-aos="fade-right" data-aos-duration="1500">
       <h3>Projetos</h3>
       <p class="sub-title">Aqui estão alguns dos meus trabalhos, criados com foco em estética, funcionalidade e propósito. Cada projeto foi pensado para gerar impacto e entregar resultados.</p>
     </div>
-    <div class="projeto-items">
+    <div class="projeto-items" data-aos="zoom-in" data-aos-duration="1000">
       <div class="projeto-item">
         <img src="" alt="">
         <h4>Projeto</h4>
         <p>Apenas uma pequena descrição do projeto.</p>
         <a href="">Acessar projeto</a>
       </div>
-      <div class="projeto-item">
+      <div class="projeto-item" data-aos="zoom-out" data-aos-duration="1500">
         <img src="" alt="">
         <h4>Projeto</h4>
         <p>Apenas uma pequena descrição do projeto.</p>
@@ -98,5 +106,6 @@
       <p>© Anderson Otávio 2025. Todos os direitos reservados</p>
     </div>
   </footer>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
