@@ -253,10 +253,12 @@ header ul li a.active:hover{
 #projetos .projeto-item img{
   max-width: 544px;
   width: 100%;
-  height: 160px;
+  
   background: var(--foreground);
   margin-bottom: 24px;
   border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+  object-position: center;
 }
 #projetos .projeto-item h4{
   font-size: 2.4rem;
